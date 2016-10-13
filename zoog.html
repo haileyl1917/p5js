@@ -1,0 +1,59 @@
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script>
+    <script>
+      function setup() {
+        createCanvas(600,600);
+      }
+      
+      function draw() {
+        
+        //entire shape of the ladybug
+        ellipseMode(CENTER)
+        fill(200,0,0)
+        strokeWeight(3)
+        ellipse(300,300,400,400)
+        
+        //fills the black spots in
+        fill(0,0,0)
+        
+        //the biggest circle that goes on the line
+        ellipse(300,250,95,90)
+        
+        //line through the middle
+        rectMode(CENTER)
+        stroke(0,0,0)
+        rect(300,300,1,400)
+        
+        //spots
+        ellipse(200,175,60,60)
+        ellipse(400,175,60,60)
+        ellipse(400,175,60,60)
+        ellipse(375,325,40,40)
+        ellipse(225,325,40,40)
+        ellipse(133,350,40,70)
+        ellipse(467,350,40,70)
+        ellipse(380,425,60,70)
+        ellipse(220,425,60,70)
+        
+        
+      }
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/USERNAME/p5js/blob/gh-pages/FILENAME.html?footer=0"></script>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+</html>
