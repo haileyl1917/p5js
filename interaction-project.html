@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script>
+    <script>
+      function setup() {
+        createCanvas(500,500);
+        
+      }
+      
+       var value = 150
+       
+       function draw() {
+           
+           //this puts the text on the screen
+           textSize(40)
+           textAlign(CENTER)
+           text("Drag the ladybug around!",250,100)
+           textSize(30)
+           text("Press any key while dragging it",250,450)
+           text("to make the ladybug glow!",250,490)
+       }
+      
+       function mouseDragged() {
+         //this makes the basic shape of the ladybug
+         clear()
+         ellipseMode(CENTER)
+         fill(value,0,0)
+         strokeWeight(3)
+         ellipse(mouseX,mouseY,200,200)
+        
+        //fills the black spots in
+         fill(0,0,0)
+        
+        //the biggest circle that goes on the line
+         ellipse(mouseX,mouseY-10,50,45)
+        
+        //line through the middle
+         rectMode(CENTER)
+         stroke(0,0,0)
+         rect(mouseX,mouseY,1,200)
+        
+        //spots
+         ellipse(mouseX-50,mouseY-50,30,30)
+         ellipse(mouseX+50,mouseY-50,30,30)
+         ellipse(mouseX-25,mouseY+25,20,20)
+         ellipse(mouseX+25,mouseY+25,20,20)
+         ellipse(mouseX-67,mouseY+45,20,35)
+         ellipse(mouseX+67,mouseY+45,20,35)
+         ellipse(mouseX+30,mouseY+70,30,35)
+         ellipse(mouseX-30,mouseY+70,30,35)
+       }
+      
+      function keyPressed() {
+          //this changed the color of the ladybug to a brighter red
+        if (value == 150) {
+          value = 255;
+        } else {
+          value = 150;
+        }
+      }
+      
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/hailey1917/p5js/blob/gh-pages/interaction-project.html?footer=0"></script>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
